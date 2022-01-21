@@ -1,0 +1,62 @@
+body{
+    background: gray;
+
+}
+.parent{
+    display: flex;
+    justify-content: space-evenly;
+}
+.mobile{
+    border: 2px solid red;
+    border-radius: 1rem;
+    max-width: 360px;
+    max-height: 650px;
+    padding: 0 1rem 1rem 1rem ;
+    background: whitesmoke;    
+
+
+}
+input{
+    margin-left: 1rem;
+    width: 17rem;
+    height: 2rem;
+    border-radius:8px;
+}
+.group-main{
+    border:1px solid white ;
+    max-height:450px ;
+    overflow: auto;
+}
+.mobile1{
+    margin: 2rem;
+    box-sizing: border-box;
+    
+}
+.mobile2{
+    margin: 2rem;
+}
+.group{
+    display: flex;
+    padding: 0px;  
+}
+.group img{
+
+    height: 50px;
+    border-radius:50px  50px;
+}
+.text{
+    margin-top: -10px;
+    line-height: 8px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+nav ul{    
+    display: flex;
+    list-style-type: none;
+}
+nav a{
+    padding-left:1.9rem;
+    text-decoration-line: none;
+    color: black;
+}
+/*********************************First Mobile Screen Completed***********************************/
