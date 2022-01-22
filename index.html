@@ -12,9 +12,11 @@
     <div class="parent">
         <div class="mobile mobile1">
             <h3>Messages</h3>
+            <form action="">
             <input class="input" type="search" placeholder="search">
             <input class="input2" type="submit" value="Search" name="" id="">
-            <br><br>
+        </form>
+            <br>
             <button><a href="#">All</a></button>
             <button><a href="#">online</a></button>
             <hr>
@@ -123,9 +125,9 @@
             <footer>
                 <nav>
                     <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">Messages</a></li>
-                        <li><a href="#">Setting</a></li>
+                        <i class="fas fa-home"><a href="#"></a></i>
+                        <i class="fas fa-envelope"><a href="#"></a></i>
+                        <i class="fas fa-cogs"><a href="#"></a></i>
                     </ul>
                 </nav>
             </footer>
@@ -145,13 +147,23 @@
             </div>
             <hr>
                        <!--------------Header Section end Mobile Screen '2'-------------->
-            <div class="messages">                
-                <form action="">
+            <div class="messages">
+                <div class="messHub"></div>                
+                <form id='form1' action="">
                     <input type="text">
                     <img src="image/arrow-right.png" alt="">
                     <input class="icon-rtl" type="submit" value="">
                 </form>
             </div>
+            <footer>
+                <nav>
+                    <ul>
+                        <i class="fas fa-home"><a href="#"></a></i>
+                        <i class="fas fa-envelope"><a href="#"></a></i>
+                        <i class="fas fa-cogs"><a href="#"></a></i>
+                    </ul>
+                </nav>
+            </footer>
         </div>
     </div>
 </body>
