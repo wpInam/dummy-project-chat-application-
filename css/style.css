@@ -6,21 +6,38 @@ body{
     display: flex;
     justify-content: space-evenly;
 }
+a{
+    text-decoration-line: none;
+    color:black;
+    
+}
 .mobile{
     border: 2px solid red;
     border-radius: 1rem;
     max-width: 360px;
+    min-width: 360px;
     max-height: 650px;
+    min-height: 650px;
     padding: 0 1rem 1rem 1rem ;
     background: whitesmoke;    
 
 
 }
-input{
-    margin-left: 1rem;
-    width: 17rem;
+.input{
+    margin-left: .5rem;
+    width: 15rem;
     height: 2rem;
-    border-radius:8px;
+    border-radius:8px 0 0 8px;
+}
+.input2{
+    height: 2rem;
+    width: 4rem;
+    background: white;
+    border-left: 0;
+
+    border-style: solid;
+    border-color: black;
+    border-radius: 0 8px 8px 0;
 }
 .group-main{
     border:1px solid white ;
@@ -35,12 +52,19 @@ input{
 .mobile2{
     margin: 2rem;
 }
+.navigation{
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
 .group{
     display: flex;
     padding: 0px;  
 }
 .group img{
-
+    padding-right: 9px;
     height: 50px;
     border-radius:50px  50px;
 }
@@ -60,3 +84,10 @@ nav a{
     color: black;
 }
 /*********************************First Mobile Screen Completed***********************************/
+.messages{
+    min-height: 35rem;
+    border: 1px solid rgb(156, 106, 106);
+    display: flex;
+    align-items: flex-end;
+    overflow: hidden;
+}
