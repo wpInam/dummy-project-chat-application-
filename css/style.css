@@ -35,14 +35,12 @@ a{
     width: 4rem;
     background: white;
     border-left: 0;
-
     border-style: solid;
     border-color: black;
     border-radius: 0 8px 8px 0;
 }
 .group-main{
-    border:1px solid white ;
-    min-height:450px;
+    border:1px solid white ;    
     overflow: auto;
 }
 .mobile1{
@@ -129,4 +127,13 @@ nav a{
     left: -1rem;
     top: auto;
     opacity: .3;
+}
+.blu{
+    background: rgba(46, 46, 250, 0.767);
+    color: white;
+    width: fit-content;
+    min-height:2rem;
+    margin: .5rem;
+    padding: .5rem;
+    border-radius: .5rem;
 }
