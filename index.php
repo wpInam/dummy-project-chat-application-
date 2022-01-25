@@ -42,18 +42,18 @@
                 <div id="profile">
 
                 </div>
-                <span class=""></span>
+                <span id="span" class=""></span>
                 <a href="#"><i class="fas fa-phone"></i></a>
                 <a href="#"><i class="fas fa-video"></i></a>
             </div>
             <hr>
-            <!--------------/ Header Section end Mobile Screen '2'-------------->
+            <!--------------Header Section end Mobile Screen '2'-------------->
             <div class="messages">
                 <div class="messHub"></div>
                 <form id='form1' action="">
                     <input type="text" id='sndMes'>
-                    <img src="image/arrow-right.png" alt="">
-                    <input class="icon-rtl" type="button" id="send" value="">
+                    <img src="image/arrow-right.png" class="send" alt="">
+                    <input class="icon-rtl" type="submit" class="send" value="">
                 </form>
             </div>
             <footer>
@@ -70,8 +70,6 @@
     <script src="js/jquery.js"></script>
     <script>
         $(document).ready(function() {
-
-            /*********************** Variables ************************/
             /*********************** Css ************************/
             $('.group-main').css({
                 "min-height": '450px'
@@ -116,10 +114,11 @@
             /*********************** Mobile 2 ************************/
             $(document).on('click', 'a', function(e) {
                 e.preventDefault();
-
                 var clas = $(this).data("name");
-                $("span").removeClass().addClass(clas);
                 var id = $(this).data("id");
+
+                $('span').text(id).hide();
+                
 
                 $.ajax({ // For profile picture
                     url: 'profilePic.php',
@@ -132,38 +131,36 @@
                     }
                 })
 
-                function showMess() {
-                    $.ajax({ //for show messages
-                        url: 'mobile2.php',
-                        type: 'POST',
-                        data: {
-                            names: clas
-                        },
-                        success: function(data) {
-                            $('.messHub').html(data);
-                        }
-                    });
-                }
-                showMess();                
-
-            })
-            /******************************************* */
-            $(document).on("click","",function(e){
-                e.preventDefault();
-                var value = $(this).val();
-                var tblName = $("span").attr('class');
-              
-                $.ajax({
-                    url: "insert.php",
+                $.ajax({ //for show messages
+                    url: 'mobile2.php',
                     type: 'POST',
-                    data: {value: value, names: tblName},
-                        success: function(){
+                    data: {
+                        id: id,
+                    },
+                    success: function(data) {
+                        $('.messHub').html(data);
+                    }
+                })
+            })
+            /*********************** Mobile 2 input send messages************************/
+            $('.send').on('click',function(){
+                var text = $('#sndMes').val();
+                var sndId = $('span').text();
+
+                $.ajax({
+                    url: 'insert.php',
+                    type: 'POST',
+                    data: {text: text, sndId:sndId},
+                    success: function(data){
+                        if(data == 1){
                             
                         }
-                    })
-                
+                    }
+                })
             })
         })
+            
+
     </script>
 </body>
 
